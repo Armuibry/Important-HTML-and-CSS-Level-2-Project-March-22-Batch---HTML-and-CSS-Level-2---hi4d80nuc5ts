@@ -1,1 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <title>Netflix Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/png" href="images/nlogo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <section class="main">
+        <div class="head">
+            <img src="images/Netflix-Logo.wine.png" alt="Netflix Logo">
+            <div class="headright">
+                <label class="select-lang">
+                    <select name="Language" class="language">
+                        <option value="english">English</option>
+                        <option value="hindi">हिन्दी</option>
+                    </select>
+                </label>
+
+                <a href="https://www.netflix.com/in/login">Sign In</a>
+            </div>
+        </div>
+    </section>
+    <section class="banner">
+        <img src="images/Background.jpeg" alt="Background image" onclick="resetInput()">
+        <div class="box">
+            <div class="header">
+                <h1>Unlimited movies, TV shows and more.</h1>
+                <h4>Watch anywhere. Cancel anytime.</h4>
+                <p>Ready to watch? Enter your email to create or restart your membership.</p>
+            </div>
+            <div>
+                <form action="submit" class="search">
+                    <input onclick="shiftlabel()" type="email" id="email" class="mailInput" required>
+                    <button class="input-button">Get Started ></button>
+                </form>
+
+            </div>
+            <label for="input" id="input-label" onclick="freeinput()">Email Address</label>
+        </div>
+    </section>
+    <section class="containertv">
+        <div class="text">
+            <div class="content">
+                <h1>Enjoy on your TV.</h1>
+                <p class="para1">Watch on smart TVs, PlayStation, Xbox,<br> Chromecast, Apple TV, Blu-ray players and
+                    <br> more.
+                </p>
+            </div>
+        </div>
+        <div class="tv">
+            <img src="images/tv.png" alt="TV image">
+            <video src="videos/Video in TV" autoplay loop muted></video>
+        </div>
+    </section>
+    <section class="containertv">
+        <div class="tv">
+            <div class="mobile">
+                <img class="mobimage" src="images/Mobile Phone.jpeg" alt="mobile image">
+                <div class="strange">
+                    <img class="strangerimg" src="images/Stranger things icon.png" alt="stranger icon">
+                    <p>Stranger Things <br> <span>Downloading...</span></p>
+                    <img class="load" src="images/Downloading animation.gif" alt="download animation">
+                </div>
+            </div>
+
+        </div>
+        <div class="text">
+            <div class="contentmob">
+                <h1>Download your shows <br> to watch offline.</h1>
+                <p class="para2">Save your favourites easily and always have <br> something to watch.</p>
+            </div>
+        </div>
+    </section>
+    <section class="containermonitor">
+        <div class="text">
+            <div class="content">
+                <h2>Watch everywhere.</h2>
+                <p class="para3">Stream unlimited movies and TV shows on <br> your phone, tablet, laptop, and TV.</p>
+            </div>
+        </div>
+        <div class="tv">
+            <div class="monitor">
+                <img src="images/Monitor.png" alt="TV image">
+                <video src="videos/video in monitor" autoplay loop muted></video>
+            </div>
+        </div>
+    </section>
+    <section class="containertv">
+        <div class="tv">
+            <div class="monitor">
+                <img src="images/Children.png" alt="Children image">
+            </div>
+        </div>
+        <div class="text">
+            <div class="content4">
+                <h2>Create profiles for <br> children.</h2>
+                <p class="para4">Send children on adventures with their <br> favourite characters in a space made just
+                    for <br> them—free with your membership.</p>
+            </div>
+        </div>
+    </section>
+    <section class="list">
+        <h1>Frequently Asked Questions</h1>
+        <div class="menulist">
+            <div class="item" id="item1" onclick="toggle()">
+                <a href="#item1" class="title"><span>What is Netflix?</span> <i class="icon"></i></a>
+                <p class="text1" id="para1">Netflix is a streaming service that offers a wide variety of award-winning
+                    TV shows, movies, anime,
+                    documentaries and more – on thousands of internet-connected devices.
+                    <br> <br>
+                    You can watch as much as you want, whenever you want, without a single ad – all for one low monthly
+                    price. There's always something new to discover, and new TV shows and movies are added every week!
+                </p>
+            </div>
+            <div class="item" id="item2" onclick="toggle1()">
+                <a href="#item2" class="title"><span>How much does Netflix cost?</span> <i class="icon"></i></a>
+                <p class="text1" id="para2">Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming
+                    device, all for one fixed monthly fee. Plans range from ₹ 149 to ₹ 649 a month. No extra costs, no
+                    contracts.
+                </p>
+            </div>
+            <div class="item" id="item3" onclick="toggle2()">
+                <a href="#item3" class="title"><span>Where can I watch?</span> <i class="icon"></i></a>
+                <p class="text1" id="para3">Watch anywhere, anytime. Sign in with your Netflix account to watch
+                    instantly on the web at netflix.com from your personal computer or on any internet-connected device
+                    that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and
+                    game consoles.
+                    <br> <br>
+                    You can also download your favourite shows with the iOS, Android, or Windows 10 app. Use downloads
+                    to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.
+                </p>
+            </div>
+            <div class="item" id="item4" onclick="toggle3()">
+                <a href="#item4" class="title"><span>How do I cancel?</span> <i class="icon"></i></a>
+                <p class="text1" id="para4">Netflix is flexible. There are no annoying contracts and no commitments. You
+                    can easily cancel your account online in two clicks. There are no cancellation fees – start or stop
+                    your account anytime.
+                </p>
+            </div>
+            <div class="item" id="item5" onclick="toggle4()">
+                <a href="#item5" class="title"><span>What can I watch on Netflix?</span> <i class="icon"></i></a>
+                <p class="text1" id="para5">Netflix has an extensive library of feature films, documentaries, TV shows,
+                    anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.
+                </p>
+            </div>
+            <div class="item" id="item6" onclick="toggle5()">
+                <a href="#item6" class="title"><span>Is Netflix good for kids?</span> <i class="icon"></i></a>
+                <p class="text1" id="para6">The Netflix Kids experience is included in your membership to give parents
+                    control while kids enjoy family-friendly TV shows and films in their own space.
+                    <br> <br>
+                    Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of
+                    content kids can watch and block specific titles you don’t want kids to see.
+                </p>
+            </div>
+        </div>
+        <section class="getus">
+            <p>Ready to watch? Enter your email to create or restart your membership.</p>
+            <form action="submit" class="search">
+                <input onclick="shiftlabel()" type="email" id="email" placeholder="Email Address" class="mailInput"
+                    required>
+                <button class="input-button">Get Started &nbsp;&gt;</button>
+            </form>
+        </section>
+    </section>
+    <section class="footer">
+        <p>Questions? Call <a href="#">000-800-040-1843</a></p>
+        <div class="footdiv">
+            <div class="footsec">
+                <a href="#">FAQ</a>
+                <a href="#">Investor Relations</a>
+                <a href="#">Privacy</a>
+                <a href="#">Speed Test</a>
+            </div>
+            <div class="footsec">
+                <a href="#">Help Centre</a>
+                <a href="#">Jobs</a>
+                <a href="#">Cookie Preferences</a>
+                <a href="#">Legal Notices</a>
+            </div>
+            <div class="footsec">
+                <a href="#">Account</a>
+                <a href="#">Ways to Watch</a>
+                <a href="#">Corporate Information</a>
+                <a href="#">Only on Netflix</a>
+            </div>
+            <div class="footsec">
+                <a href="#">Media Centre</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+
+
+    </section>
+    <section class="last">
+        <label class="footlang">
+            <select name="Language" class="footlangchange">
+                <option value="english">English</option>
+                <option value="hindi">हिन्दी</option>
+            </select>
+        </label>
+
+        <span>Netflix India</span>
+
+    </section>
+
+
+
+
+</body>
+<script src="App.js"></script>
+
+</html>
